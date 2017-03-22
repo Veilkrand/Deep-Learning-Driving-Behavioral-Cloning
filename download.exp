@@ -1,0 +1,24 @@
+#!/usr/bin/expect -f
+
+
+set ip [lindex $argv 0]
+
+# connect via scp
+spawn scp carnd@$ip:~/Behavioral-Cloning-P3/model.h5 .
+
+#######################
+expect {
+  -re ".*sword.*" {
+    exp_send "carnd\r"
+    exp_continue
+  }
+
+  eof {
+	
+	spawn python drive.py model.h5 \r
+    
+  }
+}
+
+
+interact

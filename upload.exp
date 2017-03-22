@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+
+
+set ip [lindex $argv 0]
+
+# connect via scp
+spawn scp clone.py carnd@$ip:~/Behavioral-Cloning-P3
+#######################
+expect {
+  -re ".*es.*o.*" {
+    exp_send "yes\r"
+    exp_continue
+  }
+  -re ".*sword.*" {
+    exp_send "carnd\r"
+  }
+}
+interact
