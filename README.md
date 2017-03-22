@@ -48,7 +48,7 @@ The network has 24 layers plus output value. There are 10 layers with learnable 
 
 Here is a visualization of the architecture:
 
-![Model Image](./output\ images/neural\ network.png)
+![Model Image](./output%20images/neural%20network.png)
 
 
 ##Model Architecture and Training Strategy
@@ -135,13 +135,13 @@ With all recordings I got more than 20,000 data samples. I skipped the steering 
 
 This is the histogram of the data steering angles without zero values:
 
-![Histogram1](./examples/steering\ angles\ normalized.png)
+![Histogram1](./examples/steering%20angles%20normalized.png)
 
 As part of the preprocessing of the data set, I also resized all images (training and validation) to squared 128x128 to fit my model input. I randomly shuffled the data set and put 20% of the data into a validation set.
 
 Visualization of the validation dataset sample, resized ready to use during training:
 
-![Histogram1](./output\ images/figure_100.png)
+![Histogram1](./output%20images/figure_100.png)
 
 
 The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 12 with a batch number of 64 as evidenced by multiples runs comparing them using an empirical approach.
@@ -153,7 +153,7 @@ Having around 12,000 data samples in total for training and validation sets. I i
 
 Visualization of the augmented dataset sample, with random brightness and shadows:
 
-![Histogram1](./output\ images/preprocessed.png)
+![Histogram1](./output%20images/preprocessed.png)
 
 
 Augmentation tecniques I used by order:
